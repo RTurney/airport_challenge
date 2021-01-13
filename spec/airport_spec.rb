@@ -35,7 +35,7 @@ describe Airport do
     it "can be overwritten when initialised" do
       new_capacity = 10
       airport = Airport.new(new_capacity)
-      subject.capacity.times { airport.land(plane) }
+      airport.capacity.times { airport.land(plane) }
       expect { airport.land(plane) }.to raise_error "The hangar is full"
     end
   end
